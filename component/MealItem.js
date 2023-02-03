@@ -25,7 +25,7 @@ export default MealItem;
 
 const styles = StyleSheet.create({
     container : {
-        margin:16,
+        margin:10,
         borderRadius:15,
         backgroundColor : "white",
         overflow : "hidden",
