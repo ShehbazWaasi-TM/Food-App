@@ -1,10 +1,20 @@
 import React from 'react'
 import { View, Text, Pressable, Image, StyleSheet } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 
-const MealItem = ({title, imageUrl, affordability , complexity, duration}) => {
+const MealItem = ({title, imageUrl, affordability , complexity, duration,ingredients, steps}) => {
+
+  const navigation =  useNavigation()
+
+  const seeMoreDetails = () => {
+    navigation.navigate("MealsDetailScreen",{
+      ingredients : ingredients,
+      steps : steps
+    })
+  }
   return (
     <View style={styles.container}>
-      <Pressable >
+      <Pressable onPress={seeMoreDetails} >
         <View style={styles.innerContainer}>
         <View>
            <Image style={styles.image} source={{uri : imageUrl}}/>
