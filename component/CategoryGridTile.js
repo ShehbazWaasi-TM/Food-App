@@ -2,7 +2,6 @@ import { View, Text, Pressable, StyleSheet } from 'react-native'
 import React from 'react'
 
 
-
 export default function CategoryGridTile({title, color, onPress}) {    
   return (
     <View style={[styles.GridItem, {backgroundColor : color}]} >

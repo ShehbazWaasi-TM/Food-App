@@ -15,10 +15,9 @@ const CategoriesScreen = ({navigation}) => {
       return <CategoryGridTile title={itemData.item.title} color={itemData.item.color} onPress={PressHandler} /> ;
   }
   
-  return (<View style={styles.container}>
+  return (
     <FlatList  data={CATEGORIES} keyExtractor={(item)=> item.id} renderItem={renderCategoryItem} 
          numColumns={2} />
-    </View>
     
   )
 }
@@ -26,12 +25,4 @@ const CategoriesScreen = ({navigation}) => {
 export default CategoriesScreen;
 
 
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      // backgroundColor: '#000',
-    //   alignItems: 'center',
-    //   justifyContent: 'center'
-    },
-  });
   

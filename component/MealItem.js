@@ -9,7 +9,9 @@ const MealItem = ({title, imageUrl, affordability , complexity, duration,ingredi
   const seeMoreDetails = () => {
     navigation.navigate("MealsDetailScreen",{
       ingredients : ingredients,
-      steps : steps
+      steps : steps,
+      imageUrl : imageUrl,
+      title : title
     })
   }
   return (
