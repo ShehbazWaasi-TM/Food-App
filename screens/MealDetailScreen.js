@@ -10,16 +10,20 @@ const MealDetailScreen = ({route, navigation}) => {
         ImageSource : route.params.imageUrl
     }
     
+    const {params} = route
+
     const HeaderButtonPressHandler = () => {
-        navigation.navigate("MealsCategories")
+        navigation.navigate("MealsCategories",{
+            user       : params.user,
+        })
     }
 
     useLayoutEffect(()=> {
         navigation.setOptions({
             title :  MealDetails.title,
             headerRight : () => {
-                return <IconButton />
-              }
+                return <IconButton onPress={HeaderButtonPressHandler} />
+              },
         })
     },[ MealDetails.title,navigation])
 

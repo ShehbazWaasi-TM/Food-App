@@ -2,16 +2,19 @@ import React from 'react'
 import { View, Text, Pressable, Image, StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
-const MealItem = ({title, imageUrl, affordability , complexity, duration,ingredients, steps}) => {
+const MealItem = ({title, imageUrl, affordability , complexity, duration,ingredients, steps, route}) => {
 
   const navigation =  useNavigation()
+  const {params} = route
+  console.log("params", params.user)
 
   const seeMoreDetails = () => {
     navigation.navigate("MealsDetailScreen",{
       ingredients : ingredients,
       steps : steps,
       imageUrl : imageUrl,
-      title : title
+      title : title,
+      user       : params.user,
     })
   }
   return (

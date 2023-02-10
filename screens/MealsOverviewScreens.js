@@ -29,7 +29,7 @@ const MealsOverviewScreens = ({route, navigation}) => {
     console.log("itemdata", itemData)
     const item = itemData.item
     return (
-      <MealItem navigation={navigation} title={item.title} imageUrl={item.imageUrl} affordability={item.affordability} complexity={item.complexity} duration={item.duration} ingredients={item.ingredients} steps={item.steps}  />
+      <MealItem route={route} navigation={navigation} title={item.title} imageUrl={item.imageUrl} affordability={item.affordability} complexity={item.complexity} duration={item.duration} ingredients={item.ingredients} steps={item.steps}  />
     )
   }
 
