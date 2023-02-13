@@ -24,7 +24,7 @@ const MealDetailScreen = ({route, navigation}) => {
         navigation.setOptions({
             title :  MealDetails.title,
             headerRight : () => {
-                return <IconButton onPress={HeaderButtonPressHandler} />
+                return <IconButton style={styles.IconButton} onPress={HeaderButtonPressHandler} />
               },
         })
     },[ MealDetails.title,navigation])
@@ -78,5 +78,8 @@ const styles = StyleSheet.create({
         color : "white",
         fontSize : 15,
         margin : 8
+    },
+    IconButton:{
+      marginRight : 15
     }
 })

@@ -25,15 +25,14 @@ export default function WelcomeScreen({navigation}) {
   return (
     <ImageBackground source={bgImage} style={styles.container}>
       <View style={styles.innerContainer}>
-      {/* <Text style={styles.Name}>Name</Text> */}
-      <TouchableOpacity style={[styles.button ]}
-       onPress={() => console.log('Button pressed')}
-       onPressIn={() => setIsHovered(true)}
-       onPressOut={() => setIsHovered(false)}
-       >
-         <TextInput  style={[styles.input, isHovered && styles.buttonHover]} value={user} onChangeText={handleInput} placeholder="Enter your Name" />
-      </TouchableOpacity>
-      {error ? <Text style={styles.error} >{error}</Text> : ""}
+        <TouchableOpacity style={[styles.button ]}
+        onPress={() => console.log('Button pressed')}
+        onPressIn={() => setIsHovered(true)}
+        onPressOut={() => setIsHovered(false)}
+        >
+            <TextInput  style={[styles.input, isHovered && styles.buttonHover]} value={user} onChangeText={handleInput} placeholder="Enter your Name" />
+        </TouchableOpacity>
+        {error ? <Text style={styles.error} >{error}</Text> : <Text></Text>}
       <Button  title='Proceed' onPress={handleSubmit} />
       </View>
     </ImageBackground>

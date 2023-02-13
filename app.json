@@ -1,14 +1,13 @@
 {
   "expo": {
     "name": "Food-App",
-    "slug": "RNCourse",
-    "assets" : ["./assets/Food_bg.jpg"],
+    "slug": "Recipes-App",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Food_Icon.webp",
     "backgroundColor":"#24180f",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash.webp",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
