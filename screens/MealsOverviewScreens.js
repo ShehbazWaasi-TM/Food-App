@@ -22,7 +22,6 @@ const MealsOverviewScreens = ({route, navigation}) => {
 
   const MealData = MEALS.filter((Item)=> Item.categoryIds.find((ids) => ids===catId ? Item : null ))
   console.log("MealData",MealData)
-
  
 
   const handleMealScreen = (itemData) => {

@@ -23,7 +23,7 @@ const CategoriesScreen = ({navigation, route}) => {
         user       : params.user,
        })
     }
-      return <CategoryGridTile title={itemData.item.title} color={itemData.item.color} onPress={PressHandler} /> ;
+      return <CategoryGridTile image={itemData.item.image} title={itemData.item.title} color={itemData.item.color} onPress={PressHandler} /> ;
   }
   
   return (

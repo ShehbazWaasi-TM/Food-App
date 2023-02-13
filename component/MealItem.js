@@ -19,7 +19,7 @@ const MealItem = ({title, imageUrl, affordability , complexity, duration,ingredi
   }
   return (
     <View style={styles.container}>
-      <Pressable onPress={seeMoreDetails} >
+      <Pressable android_ripple={{color:"#ccc"}}  onPress={seeMoreDetails} >
         <View style={styles.innerContainer}>
         <View>
            <Image style={styles.image} source={{uri : imageUrl}}/>

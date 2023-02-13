@@ -1,16 +1,17 @@
-import { View, Text, Pressable, StyleSheet } from 'react-native'
+import { View, Text, Pressable, StyleSheet, ImageBackground } from 'react-native'
 import React from 'react'
 
 
-export default function CategoryGridTile({title, color, onPress}) {    
+export default function CategoryGridTile({title,image,  color, onPress}) {   
+    console.log("image", image) 
   return (
-    <View style={[styles.GridItem, {backgroundColor : color}]} >
+    <ImageBackground source={{uri : image}} style={[styles.GridItem,{backgroundColor : color} ]} >
         <Pressable android_ripple={{color:"#ccc"}} style={styles.button} onPress={onPress}>
             <View style={styles.InnerContainer}>
-               <Text style={{fontWeight:"bold", fontSize:14}} >{title}</Text>
+               <Text style={{ fontSize:20, color : "white"}} >{title}</Text>
             </View>
         </Pressable>
-    </View>
+    </ImageBackground>
   )
 }
 

@@ -2,6 +2,7 @@
   "expo": {
     "name": "Food-App",
     "slug": "RNCourse",
+    "assets" : ["./assets/Food_bg.jpg"],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
